@@ -7,7 +7,7 @@ import type { NextConfig } from "next";
 const isStaticExport = process.env["NEXT_OUTPUT"] !== "server";
 
 const nextConfig: NextConfig = {
-  ...(isStaticExport ? { output: "export" as const, basePath: "/plugins/openclawos", assetPrefix: "/plugins/openclawos" } : {}),
+  ...(isStaticExport ? { output: "standalone" as const, basePath: "/plugins/openclawos", assetPrefix: "/plugins/openclawos" } : {}),
   reactStrictMode: false,
   images: {
     unoptimized: true,
